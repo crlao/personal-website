@@ -6,7 +6,8 @@ const randKey = (obj) => {
 let asciiArt = null
 
 jQuery.get('./assets/ascii-art/125.txt', function(data) {
-    asciiArt = data;
+  console.log(data)
+  asciiArt = data;
 });
 
 $(".nav-link").click( (e) => {
