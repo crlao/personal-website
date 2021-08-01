@@ -3,12 +3,7 @@ const randKey = (obj) => {
   return keys[ keys.length * Math.random() << 0];
 };
 
-let asciiArt = null
-
-jQuery.get('./assets/ascii-art/125.txt', function(data) {
-  console.log(data)
-  asciiArt = data;
-});
+let asciiArt = ascii.size125;
 
 $(".nav-link").click( (e) => {
   event.preventDefault();
