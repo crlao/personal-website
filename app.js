@@ -9,6 +9,8 @@ jQuery.get('http://localhost/foo.txt', function(data) {
     asciiArt = data;
 });
 
+console.log(asciiArt)
+
 $(".nav-link").click( (e) => {
   event.preventDefault();
   $('html,body').animate({scrollTop:$(this.hash).offset().top}, 1200);
