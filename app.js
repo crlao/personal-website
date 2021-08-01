@@ -15,8 +15,8 @@ $(".nav-link").click( (e) => {
 });
 
 let presentTitle = () => {
-  for(let c of asciiArt) {
-    document.querySelector('#ascii').innerText += c;
+  for(let i = 0; i < asciiArt.length; i++) {
+    document.querySelector('#ascii').innerText += asciiArt[i];
   }
 }
 
