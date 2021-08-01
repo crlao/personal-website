@@ -9,7 +9,7 @@ jQuery.get('http://localhost/foo.txt', function(data) {
     asciiArt = data;
 });
 
-console.log(asciiArt)
+
 
 $(".nav-link").click( (e) => {
   event.preventDefault();
@@ -17,7 +17,9 @@ $(".nav-link").click( (e) => {
 });
 
 let presentTitle = () => {
-  return;
+  for(let c of asciiArt) {
+    document.querySelector('#ascii').innerText += c;
+  }
 }
 
 document.addEventListener('DOMContentLoaded', (e) => {
