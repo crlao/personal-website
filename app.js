@@ -3,13 +3,11 @@ const randKey = (obj) => {
   return keys[ keys.length * Math.random() << 0];
 };
 
-function readTxt(file) {
-  jQuery.get('./assets/ascii-art/125.txt', function(data) {
-    console.log(data);
-  });
-}
+let asciiArt = null
 
-ascii_file = readTxt('./assets/ascii-art/125.txt')
+jQuery.get('http://localhost/foo.txt', function(data) {
+    asciiArt = data;
+});
 
 $(".nav-link").click( (e) => {
   event.preventDefault();
