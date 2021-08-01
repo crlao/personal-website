@@ -4,11 +4,9 @@ const randKey = (obj) => {
 };
 
 function readTxt(file) {
-  fetch('./assets/ascii-art/125.txt')
-  .then(response => response.text())
-  .then((data) => {
-    console.log(data)
-  })
+  jQuery.get('./assets/ascii-art/125.txt', function(data) {
+    console.log(data);
+  });
 }
 
 ascii_file = readTxt('./assets/ascii-art/125.txt')
