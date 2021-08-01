@@ -1,0 +1,148 @@
+/*
+font-family: 'Anonymous Pro', monospace;
+- regular
+- italic
+font-family: 'Major Mono Display', monospace;
+- regular
+font-family: 'Nunito Sans', sans-serif;
+- 200
+- 300
+- 400
+*/
+
+/* Global */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 0;
+  font-family: 'Nunito Sans', sans-serif;
+  color: #FAFAFA;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+/* Loading Screen */
+#landing-page {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#loading {
+  font-family: 'Anonymous Pro', monospace;
+}
+
+#cursor {
+  border-right: .05em solid;
+  animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Page Content */
+#site-content {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Navbar */
+.navbar {
+  top: 0px;
+  height: 70px;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #3D3D3D;
+  padding: 20px 5%;
+  list-style-type: none;
+  position: fixed;
+  margin-top: 0px;
+}
+
+.nav-item {
+ margin: 0 2rem;
+}
+
+.nav-link {
+  display: block;
+  position: relative;
+  padding: 0.2em 0;
+  text-decoration: none;
+  color: #fafafa;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #b9d6f2;
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+
+.nav-link:hover::after, .nav-link:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+}
+
+/* Main Section */
+#main {
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+#name {
+  font-family: 'Major Mono Display', monospace;
+  text-align: center;
+  font-size: 100px;
+}
+
+#ascii {
+  font-family: 'Anonymous Pro', monospace;
+  background-color: inherit;
+  position: relative;
+  display: block;
+  font-size: 8px;
+  white-space: pre;
+  letter-spacing: 0;
+  line-height: 1.4;
+  font-weight: 200;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+  background-color: black;
+}
+
+.section:nth-of-type(2n) {
+  background-color: #151e3f;
+}
+
+.hide {
+  display: none;
+}
