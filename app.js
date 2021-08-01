@@ -5,7 +5,7 @@ const randKey = (obj) => {
 
 let asciiArt = null
 
-jQuery.get('http://localhost/foo.txt', function(data) {
+jQuery.get('./assets/ascii-art/125.txt', function(data) {
     asciiArt = data;
 });
 
